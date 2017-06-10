@@ -20,6 +20,36 @@ class Record
     @id = results.first()['id'].to_i
   end
 
+  def update_title()
+    sql = "UPDATE records SET title = '#{@title}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def update_type()
+    sql = "UPDATE records SET type = '#{@type}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def update_quantity()
+    sql = "UPDATE records SET quantity = '#{@quantity}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def update_cover_url()
+    sql = "UPDATE records SET cover_url = '#{@cover_url}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def update_genre()
+    sql = "UPDATE records SET genre = '#{@genre}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def update_release_year()
+    sql = "UPDATE records SET release_year = '#{@release_year}' WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM records;"
     results = SqlRunner.run(sql)
@@ -37,10 +67,11 @@ class Record
     SqlRunner.run(sql)
   end
 
-  def delete_1
-    sql = "DELETE FROM records WHERE id=#{id};"
+  def self.destroy(id)
+    sql = "DELETE FROM records WHERE id = #{id};"
     SqlRunner.run(sql)
   end
+
 
 
 
