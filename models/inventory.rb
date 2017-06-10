@@ -35,6 +35,16 @@ class Inventory
     return Record.new(results.first)
   end
 
+  def self.delete_all
+    sql = "DELETE FROM inventorys;"
+    SqlRunner.run(sql)
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM inventorys WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
 
 
 end # END of CLASS

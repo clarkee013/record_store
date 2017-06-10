@@ -37,6 +37,11 @@ class Record
     SqlRunner.run(sql)
   end
 
+  def delete_1
+    sql = "DELETE FROM records WHERE id=#{id};"
+    SqlRunner.run(sql)
+  end
+
 
 
 
