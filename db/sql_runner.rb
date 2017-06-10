@@ -1,4 +1,4 @@
-require( 'pg' )
+require('pg')
 
 class SqlRunner
 
@@ -11,5 +11,4 @@ class SqlRunner
     end
     return result
   end
-
 end

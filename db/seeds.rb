@@ -1,7 +1,7 @@
 require_relative( '../models/artist.rb' )
 require_relative( '../models/record.rb' )
 require_relative( '../models/inventory.rb' )
-require('pry-byebug')
+# require('pry-byebug')
 
 
 artist1 = Artist.new({
