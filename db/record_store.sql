@@ -5,16 +5,18 @@ DROP TABLE records;
 CREATE TABLE artists
 (
   id SERIAL8 primary key,
-  name VARCHAR(255) not null
+  name VARCHAR(255)
 );
 
 CREATE TABLE records;
 (
   id SERIAL8 primary key,
-  title VARCHAR(255) not null,
+  artist VARCHAR(255) references artist(name),
+  title VARCHAR(255),
+  type VARCHAR(255),
   quantity INT8,
-  cover_url varchar(255),
-  genre varchar(255),
+  cover_url VARCHAR(255),
+  genre VARCHAR(255),
   release_year INT8,
   
 );
