@@ -1,4 +1,4 @@
-DROP TABLE inventory;
+DROP TABLE inventorys;
 DROP TABLE artists;
 DROP TABLE records;
 
@@ -21,7 +21,7 @@ CREATE TABLE records;
   
 );
 
-CREATE TABLE inventory;
+CREATE TABLE inventorys;
 (
   id SERIAL8 primary key,
   artist_id INT8 references artists(id),
