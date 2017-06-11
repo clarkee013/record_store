@@ -37,7 +37,7 @@ def self.delete_all
   SqlRunner.run(sql)
 end
 
-def self.destroy(id)
+def self.single_delete(id)
   sql = "DELETE FROM artists WHERE id = #{id};"
   SqlRunner.run(sql)
 end

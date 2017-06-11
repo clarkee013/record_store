@@ -23,6 +23,6 @@ post '/inventorys' do
 end
 
 post '/inventorys/:id/delete' do
-  Inventory.destroy(params[:id])
+  Inventory.single_delete(params[:id])
   redirect to("/inventorys")
 end

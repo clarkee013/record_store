@@ -20,6 +20,6 @@ post '/artists' do
 end
 
 post '/artists/:id/delete' do
-  Artist.destroy(params[:id])
+  Artist.single_delete(params[:id])
   redirect to("/artists")
 end

@@ -67,7 +67,7 @@ class Record
     SqlRunner.run(sql)
   end
 
-  def self.destroy(id)
+  def self.single_delete(id)
     sql = "DELETE FROM records WHERE id = #{id};"
     SqlRunner.run(sql)
   end
