@@ -1,12 +1,22 @@
+<nav>
+<p><a href="/artists/new">Add Artist</a></p>
+<p><a href="/records/new">Add Stock to Inventory</a></p>
+<p><a href="/records">Show Full Inventory</a></p>
+</nav>  
+
+
 <h1>Artists</h1>
 
 <table>
-  <tr>
+<th></th>
+    <th>ID</th>
     <th>Name</th>
     <th></th>
   </tr>
   <% for artist in @artists %>
   <tr>
+    <td><%= artist.id %></td> 
+    <td>|</td>
     <td><%= artist.name %></td>
     <td>|</td>
   </tr>

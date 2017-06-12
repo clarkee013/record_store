@@ -4,6 +4,7 @@ require_relative( '../models/record.rb' )
 
 get '/records' do
   @records = Record.all()
+  @artists = Artist.all()
   erb ( :"records/index" )
 end
 

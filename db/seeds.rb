@@ -1,6 +1,6 @@
 require_relative( '../models/artist.rb' )
 require_relative( '../models/record.rb' )
-require('pry-byebug')
+# require('pry-byebug')
 
 Record.delete_all
 Artist.delete_all
@@ -69,6 +69,3 @@ record4 = Record.new({
   'release_year' => 2001
   })
 record4.save
-
-binding.pry
-nil

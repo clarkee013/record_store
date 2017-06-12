@@ -1,12 +1,38 @@
+<nav>
+<p><a href="/artists">List Artists</a></p>
+<p><a href="/artists/new">Add Artist</a></p>
+<p><a href="/records/new">Add Stock to Inventory</a></p>
+</nav> 
+
 <h1>Inventory List</h1>
 
 <table>
   <tr>
-    <th>Items</th>
+    <th>Artist ID</th>
+    <th></th>
+    <th>Artist Name</th>
+    <th></th>
+    <th>Record Title</th>
+    <th></th>
+    <th>Record Type</th>
+    <th></th>
+    <th>Genre</th>
+    <th>Year of Release</th>
+    <th></th>
+    <th>Cover Art</th>
+    <th></th>
+    <th>Stock Status</th>
     <th></th>
   </tr>
+    </tr>
+    <% for artist in @artists %>
+    <tr>
+      <td><%= artist.id %></td> 
+      <td>|</td>
+      <td><%= artist.name %></td>
+      <td>|</td>
+    <% end %>
   <% for record in @records %>
-  <tr>
     <td><%= record.title %></td>
     <td>|</td>
     <td><%= record.type %></td>
@@ -24,3 +50,4 @@
   </tr>
   <% end %>
 </table>
+
