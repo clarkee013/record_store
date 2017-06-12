@@ -1,6 +1,6 @@
 require_relative( '../models/artist.rb' )
 require_relative( '../models/record.rb' )
-# require('pry-byebug')
+require('pry-byebug')
 
 Record.delete_all
 Artist.delete_all
@@ -30,7 +30,7 @@ record1 = Record.new({
   'artist_id' => artist1.id,
   'title' => 'Roll With It',
   'type' => 'CD Single',
-  'quantity' => 2,
+  'quantity' => 15,
   'cover_url' => 'http://bit.ly/2ra4zKq',
   'genre' => "Rock",
   'release_year' => 1995
@@ -52,7 +52,7 @@ record3 = Record.new({
   'artist_id' => artist3.id,
   'title' => 'Fuzzy Logic',
   'type' => 'CD Album',
-  'quantity' => 1,
+  'quantity' => 5,
   'cover_url' => 'http://bit.ly/2rRrTiZ',
   'genre' => "Psychedelic Rock",
   'release_year' => 1996
@@ -63,9 +63,12 @@ record4 = Record.new({
   'artist_id' => artist4.id,
   'title' => 'Good Country (Hello Nightclub)',
   'type' => 'CD Album',
-  'quantity' => 1,
+  'quantity' => 3,
   'cover_url' => 'http://bit.ly/2ssZO2G',
   'genre' => "Electronica",
   'release_year' => 2001
   })
 record4.save
+
+binding.pry
+nil

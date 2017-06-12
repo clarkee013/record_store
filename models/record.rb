@@ -9,7 +9,7 @@ class Record
     @artist_id = options['artist_id'].to_i
     @title = options['title']
     @type = options['type']
-    @quantity = options['quantity']
+    @quantity = options['quantity'].to_i
     @cover_url = options['cover_url']
     @genre = options['genre']
     @release_year = options['release_year']
@@ -73,7 +73,16 @@ class Record
     SqlRunner.run(sql)
   end
 
-
+  def stock_level()
+    case @quantity
+    when 1..3
+      return "Stock Low!"
+    when 4..7 
+    return "Stock OK!"
+  else 
+    return "Stock High!"
+    end
+  end
 
 
 
