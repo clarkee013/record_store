@@ -2,10 +2,11 @@ require_relative( '../db/sql_runner' )
 
 class Record
 
-  attr_reader( :id, :title, :type, :quantity, :cover_url, :genre, :release_year )
+  attr_reader( :id, :artist_id, :title, :type, :quantity, :cover_url, :genre, :release_year )
 
   def initialize( options )
     @id = options['id'].to_i
+    @artist_id = options['artist_id'].to_i
     @title = options['title']
     @type = options['type']
     @quantity = options['quantity']
@@ -15,7 +16,7 @@ class Record
   end
 
   def save
-    sql = "INSERT INTO records (title, type, quantity, cover_url, genre, release_year) VALUES ('#{title}', '#{type}', #{quantity}, '#{cover_url}', '#{genre}', #{release_year}) RETURNING * ;"
+    sql = "INSERT INTO records (artist_id, title, type, quantity, cover_url, genre, release_year) VALUES (#{artist_id}, '#{title}', '#{type}', #{quantity}, '#{cover_url}', '#{genre}', #{release_year}) RETURNING * ;"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
   end

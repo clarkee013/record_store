@@ -2,6 +2,9 @@ require_relative( '../models/artist.rb' )
 require_relative( '../models/record.rb' )
 # require('pry-byebug')
 
+Record.delete_all
+Artist.delete_all
+
 
 artist1 = Artist.new({
   'name' => 'Oasis'

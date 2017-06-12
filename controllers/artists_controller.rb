@@ -14,7 +14,7 @@ get '/artists/new' do
 end
 
 post '/artists' do
-  artist = Artists.new(params)
+  artist = Artist.new(params)
   artist.save
   redirect to("/artists")
 end
