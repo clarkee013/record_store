@@ -24,44 +24,44 @@ artist4 = Artist.new({
 artist4.save
 
 record1 = Record.new({
-  'artist' => 'Oasis',
+  'artist_id' => artist1.id,
   'title' => 'Roll With It',
   'type' => 'CD Single',
   'quantity' => 2,
-  'cover_url' => 'http://payload159.cargocollective.com/1/0/23203/5484124/oasis_roll_with_it_o.jpg',
+  'cover_url' => 'http://bit.ly/2ra4zKq',
   'genre' => "Rock",
   'release_year' => 1995
   })
 record1.save
 
 record2 = Record.new({
-  'artist' => 'The Verve',
+  'artist_id' => artist2.id,
   'title' => 'Urban Hymns',
   'type' => 'CD Album',
   'quantity' => 1,
-  'cover_url' => 'http://payload159.cargocollective.com/1/0/23203/5484092/verve_urban_hymns_o.jpg',
+  'cover_url' => 'http://bit.ly/2s2egvW',
   'genre' => "Rock",
   'release_year' => 1997
   })
 record2.save
 
 record3 = Record.new({
-  'artist' => 'Super Furry Animals',
+  'artist_id' => artist3.id,
   'title' => 'Fuzzy Logic',
   'type' => 'CD Album',
   'quantity' => 1,
-  'cover_url' => 'http://payload161.cargocollective.com/1/0/23203/5524250/SFA-Web-2.jpg',
+  'cover_url' => 'http://bit.ly/2rRrTiZ',
   'genre' => "Psychedelic Rock",
   'release_year' => 1996
   })
 record3.save
 
 record4 = Record.new({
-  'artist' => 'Groove Armada',
-  'title' => 'Fuzzy Logic',
+  'artist_id' => artist4.id,
+  'title' => 'Good Country (Hello Nightclub)',
   'type' => 'CD Album',
   'quantity' => 1,
-  'cover_url' => 'http://payload161.cargocollective.com/1/0/23203/5524250/SFA-Web-2.jpg',
+  'cover_url' => 'http://bit.ly/2ssZO2G',
   'genre' => "Electronica",
   'release_year' => 2001
   })

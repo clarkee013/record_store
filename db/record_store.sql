@@ -10,7 +10,6 @@ CREATE TABLE artists
 CREATE TABLE records
 (
   id SERIAL8 primary key,
-  artist VARCHAR(255), 
   artist_id INT8 references artists(id),
   title VARCHAR(255),
   type VARCHAR(255),
