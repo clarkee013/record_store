@@ -8,45 +8,23 @@
 
 <table>
   <tr>
-    <th>Artist ID</th>
-    <th></th>
-    <th>Artist Name</th>
-    <th></th>
     <th>Record Title</th>
-    <th></th>
     <th>Record Type</th>
-    <th></th>
+    <th>Quantity</th>
     <th>Genre</th>
     <th>Year of Release</th>
-    <th></th>
     <th>Cover Art</th>
-    <th></th>
     <th>Stock Status</th>
-    <th></th>
   </tr>
     </tr>
-    <% for artist in @artists %>
-    <tr>
-      <td><%= artist.id %></td> 
-      <td>|</td>
-      <td><%= artist.name %></td>
-      <td>|</td>
-    <% end %>
   <% for record in @records %>
     <td><%= record.title %></td>
-    <td>|</td>
     <td><%= record.type %></td>
-    <td>|</td>
     <td><%= record.quantity %></td>
-    <td>|</td>
     <td><%= record.genre %></td>
-    <td>|</td>
     <td><%= record.release_year %></td>
-    <td>|</td>
     <td><%= record.cover_url %></td>
-    <td>|</td>
     <td><%= record.stock_level %></td>
-    <td>|</td>
   </tr>
   <% end %>
 </table>

@@ -12,7 +12,7 @@ class Record
     @quantity = options['quantity'].to_i
     @cover_url = options['cover_url']
     @genre = options['genre']
-    @release_year = options['release_year']
+    @release_year = options['release_year'].to_i
   end
 
   def save
@@ -70,6 +70,13 @@ class Record
 
   def self.single_delete(id)
     sql = "DELETE FROM records WHERE id = #{id};"
+    SqlRunner.run(sql)
+  end
+
+  def show_inventory()
+    # what do i want; i want to join the artists and records tables together by 
+    # sql = "SELECT records.*, artists.name FROM records INNER JOIN artists on records.artist_id = artist_id;"
+    sql = "SELECT artists.*, records.* FROM artists LEFT JOIN records on artist_id = record.artist_id;"
     SqlRunner.run(sql)
   end
 

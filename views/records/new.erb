@@ -3,7 +3,7 @@
 <label for="record-title"> Enter Record Title: </label> 
 <input type="text" id="record_title" name="title">
 <label for="artist_select"> Select an Artist:</label> 
-<select> name="artist_id" id="artist-select">
+<select name="artist_id"> id="artist-select">
 <% for artist in @artists %>
   <option value="<%= artist.id %>">
     <%= artist.name %>
