@@ -1,6 +1,5 @@
 require_relative( '../models/artist.rb' )
 require_relative( '../models/record.rb' )
-require_relative( '../models/inventory.rb' )
 # require('pry-byebug')
 
 
@@ -37,7 +36,7 @@ record1.save
 
 record2 = Record.new({
   'artist' => 'The Verve',
-  'title' => 'Urban Hyms',
+  'title' => 'Urban Hymns',
   'type' => 'CD Album',
   'quantity' => 1,
   'cover_url' => 'http://payload159.cargocollective.com/1/0/23203/5484092/verve_urban_hymns_o.jpg',
