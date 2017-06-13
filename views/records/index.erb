@@ -1,7 +1,7 @@
 <nav>
-<p><a href="/home">Homepage</a></p>
-<p><a href="/artists/new">Add & List Artists</a></p>
-<p><a href="/records/new">Add Stock to Inventory</a></p>
+  <p><a href="/home">Homepage</a></p>
+  <p><a href="/artists/new">Add & List Artists</a></p>
+  <p><a href="/records/new">Add Stock to Inventory</a></p>
 </nav> 
 
 <h1>Inventory List</h1>
@@ -16,16 +16,16 @@
     <th>Cover Art</th>
     <th>Stock Status</th>
   </tr>
-    </tr>
-  <% for record in @records %>
-    <td><%= record.title %></td>
-    <td><%= record.type %></td>
-    <td><%= record.quantity %></td>
-    <td><%= record.genre %></td>
-    <td><%= record.release_year %></td>
-    <td><img class="cover" src="<%= record.cover_url()%>"/></td>
-    <td><%= record.stock_level %></td>
-  </tr>
-  <% end %>
+</tr>
+<% for record in @records %>
+<td><%= record.title %></td>
+<td><%= record.type %></td>
+<td><%= record.quantity %></td>
+<td><%= record.genre %></td>
+<td><%= record.release_year %></td>
+<td><img class="cover" src="<%= record.cover_url()%>"/></td>
+<td><%= record.stock_level %></td>
+</tr>
+<% end %>
 </table>
 
