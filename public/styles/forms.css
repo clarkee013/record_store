@@ -1,10 +1,10 @@
 input[type="submit"] {
   text-transform: uppercase;
-  font-family: 'Times', serif;
+  font-family: 'Kaushan Script', cursive;
 }
 
 form {
-  font-family: 'Times', serif;
+  font-family: 'Kaushan Script', cursive;
 }
 
 select {
@@ -14,7 +14,7 @@ select {
  font-size: 0.9em;
  -webkit-appearance: none;
  background: url('/images/microdotjesus.jpg') 100% / 15% no-repeat white;
- font-family: 'Times', serif;
+ font-family: 'Kaushan Script', cursive;
  border: 1px solid orange;
 } 
 
