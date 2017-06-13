@@ -1,29 +1,48 @@
-<form action="/records" method="POST">
+<p><a href="/home">Homepage</a></p>
+<p><a href="/artists/new">Add & List Artists</a></p>
+<p><a href="/records">Show Full Inventory</a></p>
 
-<label for="record-title"> Enter Record Title: </label> 
-<input type="text" id="record_title" name="title">
-<label for="artist_select"> Select an Artist:</label> 
-<select name="artist_id"> id="artist-select">
-<% for artist in @artists %>
-  <option value="<%= artist.id %>">
-    <%= artist.name %>
-    </option> 
-    <% end %>
-    </select>
-  <label for="record-type"> Enter Record Type: </label> 
-  <input type="text" id="record_type" name="record_type">
-  <label for="record-quantity"> Enter Record Quantity: </label> 
-  <input type="number" id="record_quantity" name="quantity">
-  <label for="record-coverurl"> Enter Record Cover URL: </label> 
-  <input type="text" id="record_coverurl" name="cover_url">
-  <label for="record-genre"> Enter Record Genre: </label> 
-  <input type="text" id="record_genre" name="genre">
-  <label for="record-releaseyear"> Enter Record Release Year: </label> 
-  <input type="number" id="record_releaseyear" name="release_year">
+<hr />
 
-  <input type="submit" value="Create New Stock Item">
-
+<form  id="record_form" action="/records" method="POST">
+  <div class = "new_record">
+    <div class="record_inputs">
+      <div class="first_record_inputs">
+        <label for="record-title"> Enter Record Title: </label> 
+        <input type="text" id="record_title" name="title">
+        <label for="artist_select"> Select an Artist:</label>
+        <select name="artist_id"> id="artist-select">
+          <% for artist in @artists %>
+          <option value="<%= artist.id %>">
+            <%= artist.name %>
+          </option> 
+          <% end %>
+        </select>
+      </div>
+      <div class="second_record_inputs">
+        <label for="record-type"> Enter Record Type: </label>
+        <input type="text" id="record_type" name="record_type">
+        <label for="record-quantity"> Enter Record Quantity: </label>
+        <input id="record_quantity" type="number" id="record_quantity" name="quantity">
+      </div>
+      <div class="third_record_inputs">
+        <label for="record-coverurl"> Enter Record Cover URL: </label>
+        <input type="text" id="record_coverurl" name="cover_url">
+        <label for="record-genre"> Enter Record Genre: </label>
+        <input type="text" id="record_genre" name="genre">
+      </div>
+      <div class="fourth_record_inputs">
+        <label for="record-releaseyear"> Enter Record Release Year: </label>
+        <input id="record_release_year" type="number" id="record_releaseyear" name="release_year">
+      </div>
+    </div>
+    <div class="record_save_button">
+      <input type="image" src="/images/savebutton.png" border="0" alt="Submit" />
+    </div>
+  </div>
 </form>
+
+<hr />
 
 
 

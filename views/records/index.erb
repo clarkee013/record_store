@@ -1,6 +1,6 @@
 <nav>
-<p><a href="/artists">List Artists</a></p>
-<p><a href="/artists/new">Add Artist</a></p>
+<p><a href="/home">Homepage</a></p>
+<p><a href="/artists/new">Add & List Artists</a></p>
 <p><a href="/records/new">Add Stock to Inventory</a></p>
 </nav> 
 
@@ -23,7 +23,7 @@
     <td><%= record.quantity %></td>
     <td><%= record.genre %></td>
     <td><%= record.release_year %></td>
-    <td><%= record.cover_url %></td>
+    <td><img class="cover" src="<%= record.cover_url()%>"/></td>
     <td><%= record.stock_level %></td>
   </tr>
   <% end %>

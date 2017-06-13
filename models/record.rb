@@ -83,11 +83,11 @@ class Record
   def stock_level()
     case @quantity
     when 1..3
-      return "Stock Low!"
+      return "Low!"
     when 4..7 
-    return "Stock OK!"
+    return "OK!"
   else 
-    return "Stock High!"
+    return "High!"
     end
   end
 

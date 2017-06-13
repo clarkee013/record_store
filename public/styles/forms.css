@@ -1,0 +1,77 @@
+input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Times', serif;
+}
+
+form {
+  font-family: 'Times', serif;
+}
+
+select {
+ width: 150px;
+ padding: 5px 5px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.9em;
+ -webkit-appearance: none;
+ background: url('/images/microdotjesus.jpg') 100% / 15% no-repeat white;
+ font-family: 'Times', serif;
+ border: 1px solid orange;
+} 
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+#artist_form {
+  display: flex;
+  align-items: center;
+}
+
+#record_quantity {
+  width: 40px;
+}
+
+#record_release_year {
+  width: 40px;
+}
+
+.new_record {
+  display: flex;
+}
+
+.record_inputs {
+  display:flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.first_record_inputs {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.second_record_inputs {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+.third_record_inputs {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.fourth_record_inputs {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.record_save_button {
+  display: flex;
+  justify-content: flex-end;
+}

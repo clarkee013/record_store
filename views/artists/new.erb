@@ -1,9 +1,33 @@
-<form action="/artists" method="POST">
+<nav>
+  <p><a href="/home">Homepage</a></p>
+  <p><a href="/records/new">Add Stock to Inventory</a></p>
+  <p><a href="/records">Show Full Inventory</a></p>
+</nav> 
 
-<label for="artist-name"> Enter Artist Name: </label> 
-<input type="text" id="artist-name" name="name">
-<input type="submit" value="Create Artist">
-  
+<hr/>
 
 
+<form id="artist_form" action="/artists" method="POST">
+  <div>
+    <label for="artist-name"> Enter New Artist Name: </label> 
+    <input type="text" id="artist-name" name="name">
+  </div>
+  <div>
+    <input id="artist_selector" type="image" src="/images/savebutton.png" border="0" alt="Submit" />
+  </div>
 </form>
+
+<hr/>
+
+
+<table id="artist_table">
+  <th>ID</th>
+  <th>Name</th>
+</tr>
+<% for artist in @artists %>
+<tr>
+  <td><%= artist.id %></td> 
+  <td><%= artist.name %></td>
+</tr>
+<% end %>
+</table>
