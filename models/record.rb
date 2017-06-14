@@ -73,12 +73,6 @@ class Record
     SqlRunner.run(sql)
   end
 
-  def show_inventory()
-    # what do i want; i want to join the artists and records tables together by 
-    # sql = "SELECT records.*, artists.name FROM records INNER JOIN artists on records.artist_id = artist_id;"
-    sql = "SELECT artists.*, records.* FROM artists LEFT JOIN records on artist_id = record.artist_id;"
-    SqlRunner.run(sql)
-  end
 
   def stock_level()
     case @quantity
