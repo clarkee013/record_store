@@ -85,12 +85,11 @@ class Record
     when 1..3
       return "Low!"
     when 4..7 
-    return "OK!"
-  else 
-    return "High!"
+      return "OK!"
+    else 
+      return "High!"
     end
   end
-
 
 
 end # END of CLASS
