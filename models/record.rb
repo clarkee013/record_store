@@ -73,7 +73,11 @@ class Record
     SqlRunner.run(sql)
   end
 
-
+  # need to have a stock level indicator
+  # if its below 3 return low message,
+  # if its higher than 3 but below 8 return ok message
+  # if its higher than 8 return high message
+  # use if statement or case statement
   def stock_level()
     case @quantity
     when 1..3
@@ -84,6 +88,12 @@ class Record
       return "High!"
     end
   end
+
+  def sort_by_release_year()
+    sql = "SELECT * FROM records ORDER BY release_year;"
+    SqlRunner.run(sql)
+  end
+
 
 
 end # END of CLASS
