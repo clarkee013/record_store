@@ -1,6 +1,6 @@
 # record_store
-1st Project - Record Store
-Ruby - CSS - HTML - SQL - SINATRA - POSTGRES
+1st Project - Record Store --
+Ruby - CSS - HTML - SQL - SINATRA - POSTGRES --
 
 _______________
  Project Brief
