@@ -29,3 +29,7 @@ Trello Colours Key:
 Green: Completed
 Amber: Not completed as not required for spec but coding to allow for addition at a later date included.
 Red: Incomplete.
+
+
+This project was delivered to fellow students and the instructors while studying at CodeClan. 
+The presentation for this is located in the presentation folder in this Git.
