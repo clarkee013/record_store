@@ -19,3 +19,13 @@ Include CSS & HTML.
 Include SQL Database Tables.
 
 
+______________
+ Project Plan
+--------------
+
+Trello board can be found here: https://trello.com/b/YTCD3tgo/record-store-project 
+
+Trello Colours Key:
+Green: Completed
+Amber: Not completed as not required for spec but coding to allow for addition at a later date included.
+Red: Incomplete.
